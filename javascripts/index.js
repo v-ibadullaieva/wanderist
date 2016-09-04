@@ -72,4 +72,12 @@ $(function() {
             }
         }
     })();
+
+    function resizeMap() {
+        var sidebarHeight = $('.c-details-container__sidebar').height();
+        $('.c-details-container__map').height(sidebarHeight);
+    }
+
+    $(window).resize(resizeMap);
+    resizeMap();
 });

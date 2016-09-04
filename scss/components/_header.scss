@@ -25,6 +25,10 @@
 		}
 
 		&:hover {
+			background-color: #d2c29b;
+		}
+
+		&:hover {
 			&:before {
 				@include sprite-image(header_menu_hover);
 
