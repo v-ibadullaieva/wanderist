@@ -16,7 +16,6 @@
 		background-color: $color-deep-yellow;
 		top: -20px;
 		left: 50%;
-		// border: 1px solid
 	}
 
 	&:after {
@@ -27,11 +26,9 @@
 		background-color: $color-deep-yellow;
 		bottom: -20px;
 		left: 50%;
-		// border: 1px solid
 	}
 
 	&__item {
 		line-height: 38px;
-
 	}
 }

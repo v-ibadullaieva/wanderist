@@ -17,6 +17,7 @@
 	&__item {
 		float: right;
 		margin-right: 14px;
+
 		&:first-of-type {
 			margin-right: 20px;
 		}
@@ -24,6 +25,10 @@
 
 	&__link {
 		display: block;
+
+		&:hover {
+			opacity: .8;
+		}
 
 		&--footer_fb {
 			&:hover {
@@ -34,13 +39,6 @@
 		&--footer_tw {
 			&:hover {
 				@include sprite-image(footer_tw_icon_hover);
-			}
-		}
-
-		&--fb,
-		&--tw {
-			&:hover {
-				opacity: .8;
 			}
 		}
 

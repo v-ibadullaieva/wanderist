@@ -2,12 +2,14 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/shared";
+
 @import "../images/images/*.png";
 @import "mixins";
 @import "variables";
 @import "fonts";
 @import "layout";
 @import "helpers";
+
 @import "components/header";
 @import "components/social";
 @import "components/main";
@@ -20,11 +22,11 @@
 @import "components/btn-expand";
 @import "components/day";
 @import "components/trip";
-@import "components/create";
+@import "components/create-contest";
 @import "components/map";
 @import "components/side-btn";
 @import "components/sidebar";
-@import "components/date";
+@import "components/date-select";
 @import "components/schedule";
 @import "components/steps";
 @import "components/footer";

@@ -5,7 +5,6 @@
 }
 
 @mixin sprite-image($image) {
-	// @include images-sprite($image);
 	@include media-sprite($image);
 	width: images-sprite-width($image);
  	height: images-sprite-height($image);
@@ -26,13 +25,7 @@
 }
 
 @mixin empty-pseudo {
-	content: ".";
+	content: "";
 	font-size: 0;
 	color: transparent;
 }
-
-
-
-
-
-

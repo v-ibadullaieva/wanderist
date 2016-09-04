@@ -3,7 +3,23 @@
   = render 'head'
   %body
     #wrapper
-      = render 'header'
+      %header.c-header
+        .c-header__wrap.l-clearfix
+          .l-left
+            %a.c-header__menu-btn{:href => "#"}
+            %ul.c-header__menu
+              %li.c-header__item
+                %a.c-header__link.c-header__link--overview{:href => "index.html"} Overview
+              %li.c-header__item
+                %a.c-header__link.c-header__link--details{:href => "details.html"} Details
+          .c-social.c-header__social.l-right
+            %span.c-social__share.l-left Share this itinerary:
+            %ul.c-social__menu.l-left
+              %li.c-social__item
+                %a.c-social__link.c-social__link--tw{:href => "#"}
+              %li.c-social__item
+                %a.c-social__link.c-social__link--fb{:href => "#"}
+
       %main
         = render 'main'
         .c-expert
@@ -19,9 +35,9 @@
             .c-trips__wrap
               .js-accordion
                 %h2.c-trips__header
-                  .c-trips__header--wrap
+                  .c-trips__header-wrap
                     Day 1
-                    .c-btn-expand
+                    .c-btn-expand.c-trips__btn-extend
                       %a.c-btn-expand__link.js-btn-expand{:href => "#"}
                         %i.c-btn-expand__icon.c-btn-expand__icon--up.js-toggle-up.fa.fa-angle-up{:"aria-hidden" => "true"}
                         %i.c-btn-expand__icon.c-btn-expand__icon--down.js-toggle-down.fa.fa-angle-down.h-hidden{:"aria-hidden" => "true"}
@@ -29,9 +45,9 @@
                   .c-day__timeline-res.l-left.h-md-visible.h-sm-hidden
                     %img.c-day__timeline-img{:src => "images/timeline_responsive.png", :alt => "timeline"}/
                   .c-day__wrap.c-day__wrap--left
-                    .c-trip.c-trip--map
+                    .c-trip.c-trip--map.c-day__trip
                       %img.c-trip__img{:src => "images/map.jpg", :alt => "map"}/
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/casino.jpg", :alt => "casino"}/
                       .c-trip__text Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                       .c-trip__show
@@ -39,20 +55,20 @@
                   .c-day__timeline.l-left.h-md-hidden
                     %img{:src => "images/timeline.png", :alt => "timeline"}/
                   .c-day__wrap.c-day__wrap--right
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/las_vegas.jpg", :alt => "las_vegas"}/
                       .c-trip__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/gondola.jpg", :alt => "gondola"}/
                       .c-trip__text Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
                 %h2.c-trips__header
-                  .c-trips__header--wrap
+                  .c-trips__header-wrap
                     Day 2
-                    .c-btn-expand
+                    .c-btn-expand.c-trips__btn-extend
                       %a.c-btn-expand__link.js-btn-expand{:href => "#"}
                         %i.c-btn-expand__icon.c-btn-expand__icon--up.js-toggle-up.h-hidden.fa.fa-angle-up{:"aria-hidden" => "true"}
                         %i.c-btn-expand__icon.c-btn-expand__icon--down.js-toggle-down.fa.fa-angle-down{:"aria-hidden" => "true"}
@@ -60,9 +76,9 @@
                   .c-day__timeline-res.l-left.h-md-visible.h-sm-hidden
                     %img.c-day__timeline-img{:src => "images/timeline_day2_responsive.png", :alt => "timeline"}/
                   .c-day__wrap.c-day__wrap--left
-                    .c-trip.c-trip--map
+                    .c-trip.c-trip--map.c-day__trip
                       %img.c-trip__img{:src => "images/map.jpg", :alt => "map"}/
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/fountain.jpg", :alt => "fountain"}/
                       .c-trip__text Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                       .c-trip__show
@@ -70,15 +86,15 @@
                   .c-day__timeline.l-left.h-md-hidden
                     %img{:src => "images/timeline_day2.png", :alt => "timeline"}/
                   .c-day__wrap.c-day__wrap--right
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/rocks.jpg", :alt => "rocks"}/
                       .c-trip__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
                 %h2.c-trips__header
-                  .c-trips__header--wrap
+                  .c-trips__header-wrap
                     Day 3
-                    .c-btn-expand
+                    .c-btn-expand.c-trips__btn-extend
                       %a.c-btn-expand__link.js-btn-expand{:href => "#"}
                         %i.c-btn-expand__icon.c-btn-expand__icon--up.js-toggle-up.h-hidden.fa.fa-angle-up{:"aria-hidden" => "true"}
                         %i.c-btn-expand__icon.c-btn-expand__icon--down.js-toggle-down.fa.fa-angle-down{:"aria-hidden" => "true"}
@@ -86,19 +102,19 @@
                   .c-day__timeline-res.l-left.h-md-visible.h-sm-hidden
                     %img.c-day__timeline-img{:src => "images/timeline_day3_responsive.png", :alt => "timeline"}/
                   .c-day__wrap.c-day__wrap--left
-                    .c-trip.c-trip--map
+                    .c-trip.c-trip--map.c-day__trip
                       %img.c-trip__img{:src => "images/map.jpg", :alt => "map"}/
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/guitar.jpg", :alt => "guitar"}/
                       .c-trip__text Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/statue2.jpg", :alt => "statue2"}/
                       .c-trip__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/party.jpg", :alt => "party"}/
                       .c-trip__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit
                       .c-trip__show
@@ -106,38 +122,21 @@
                   .c-day__timeline.l-left.h-md-hidden
                     %img{:src => "images/timeline_day3.png", :alt => "timeline"}/
                   .c-day__wrap.c-day__wrap--right
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/statue.jpg", :alt => "statue"}/
                       .c-trip__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/park.jpg", :alt => "park"}/
                       .c-trip__text Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
-                    .c-trip
+                    .c-trip.c-day__trip
                       %img.c-trip__img{:src => "images/dancing.jpg", :alt => "dancing"}/
                       .c-trip__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit
                       .c-trip__show
                         %a.c-trip__link{:href => "#"} Show on the map
-        = render 'create'
+
+        = render 'create_contest'
       = render 'footer'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,30 +17,28 @@
   <body>
     <div id='wrapper'>
       <header class='c-header'>
-        <div class='l-container'>
-          <div class='c-header__wrap l-clearfix'>
-            <div class='l-left'>
-              <a class='c-header__menu-btn' href='#'></a>
-              <ul class='c-header__menu'>
-                <li class='c-header__item'>
-                  <a class='c-header__link c-header__link--overview' href='index.html'>Overview</a>
-                </li>
-                <li class='c-header__item'>
-                  <a class='c-header__link c-header__link--details' href='details.html'>Details</a>
-                </li>
-              </ul>
-            </div>
-            <div class='c-social c-header__social l-right'>
-              <span class='c-social__share l-left'>Share this itinerary:</span>
-              <ul class='c-social__menu l-left'>
-                <li class='c-social__item'>
-                  <a class='c-social__link c-social__link--tw' href='#'></a>
-                </li>
-                <li class='c-social__item'>
-                  <a class='c-social__link c-social__link--fb' href='#'></a>
-                </li>
-              </ul>
-            </div>
+        <div class='c-header__wrap l-clearfix'>
+          <div class='l-left'>
+            <a class='c-header__menu-btn' href='#'></a>
+            <ul class='c-header__menu'>
+              <li class='c-header__item'>
+                <a class='c-header__link c-header__link--overview' href='index.html'>Overview</a>
+              </li>
+              <li class='c-header__item'>
+                <a class='c-header__link c-header__link--details' href='details.html'>Details</a>
+              </li>
+            </ul>
+          </div>
+          <div class='c-social c-header__social l-right'>
+            <span class='c-social__share l-left'>Share this itinerary:</span>
+            <ul class='c-social__menu l-left'>
+              <li class='c-social__item'>
+                <a class='c-social__link c-social__link--tw' href='#'></a>
+              </li>
+              <li class='c-social__item'>
+                <a class='c-social__link c-social__link--fb' href='#'></a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
@@ -98,7 +96,7 @@
                     </div>
                   </div>
                 </div>
-                <div class='c-user-stats'>
+                <div class='c-user-stats c-expert__user-stats'>
                   <div class='c-user-stats__item'>
                     <div class='c-user-stats__info'>Buget</div>
                     <div class='c-user-stats__bar'>
@@ -148,9 +146,9 @@
             <div class='c-trips__wrap'>
               <div class='js-accordion'>
                 <h2 class='c-trips__header'>
-                  <div class='c-trips__header--wrap'>
+                  <div class='c-trips__header-wrap'>
                     Day 1
-                    <div class='c-btn-expand'>
+                    <div class='c-btn-expand c-trips__btn-extend'>
                       <a class='c-btn-expand__link js-btn-expand' href='#'>
                         <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--up js-toggle-up fa fa-angle-up'></i>
                         <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--down js-toggle-down fa fa-angle-down h-hidden'></i>
@@ -163,10 +161,10 @@
                     <img alt='timeline' class='c-day__timeline-img' src='images/timeline_responsive.png'>
                   </div>
                   <div class='c-day__wrap c-day__wrap--left'>
-                    <div class='c-trip c-trip--map'>
+                    <div class='c-trip c-trip--map c-day__trip'>
                       <img alt='map' class='c-trip__img' src='images/map.jpg'>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='casino' class='c-trip__img' src='images/casino.jpg'>
                       <div class='c-trip__text'>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</div>
                       <div class='c-trip__show'>
@@ -178,14 +176,14 @@
                     <img alt='timeline' src='images/timeline.png'>
                   </div>
                   <div class='c-day__wrap c-day__wrap--right'>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='las_vegas' class='c-trip__img' src='images/las_vegas.jpg'>
                       <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
                       <div class='c-trip__show'>
                         <a class='c-trip__link' href='#'>Show on the map</a>
                       </div>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='gondola' class='c-trip__img' src='images/gondola.jpg'>
                       <div class='c-trip__text'>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</div>
                       <div class='c-trip__show'>
@@ -195,9 +193,9 @@
                   </div>
                 </div>
                 <h2 class='c-trips__header'>
-                  <div class='c-trips__header--wrap'>
+                  <div class='c-trips__header-wrap'>
                     Day 2
-                    <div class='c-btn-expand'>
+                    <div class='c-btn-expand c-trips__btn-extend'>
                       <a class='c-btn-expand__link js-btn-expand' href='#'>
                         <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--up js-toggle-up h-hidden fa fa-angle-up'></i>
                         <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--down js-toggle-down fa fa-angle-down'></i>
@@ -210,10 +208,10 @@
                     <img alt='timeline' class='c-day__timeline-img' src='images/timeline_day2_responsive.png'>
                   </div>
                   <div class='c-day__wrap c-day__wrap--left'>
-                    <div class='c-trip c-trip--map'>
+                    <div class='c-trip c-trip--map c-day__trip'>
                       <img alt='map' class='c-trip__img' src='images/map.jpg'>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='fountain' class='c-trip__img' src='images/fountain.jpg'>
                       <div class='c-trip__text'>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</div>
                       <div class='c-trip__show'>
@@ -225,7 +223,7 @@
                     <img alt='timeline' src='images/timeline_day2.png'>
                   </div>
                   <div class='c-day__wrap c-day__wrap--right'>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='rocks' class='c-trip__img' src='images/rocks.jpg'>
                       <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
                       <div class='c-trip__show'>
@@ -235,9 +233,9 @@
                   </div>
                 </div>
                 <h2 class='c-trips__header'>
-                  <div class='c-trips__header--wrap'>
+                  <div class='c-trips__header-wrap'>
                     Day 3
-                    <div class='c-btn-expand'>
+                    <div class='c-btn-expand c-trips__btn-extend'>
                       <a class='c-btn-expand__link js-btn-expand' href='#'>
                         <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--up js-toggle-up h-hidden fa fa-angle-up'></i>
                         <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--down js-toggle-down fa fa-angle-down'></i>
@@ -250,24 +248,24 @@
                     <img alt='timeline' class='c-day__timeline-img' src='images/timeline_day3_responsive.png'>
                   </div>
                   <div class='c-day__wrap c-day__wrap--left'>
-                    <div class='c-trip c-trip--map'>
+                    <div class='c-trip c-trip--map c-day__trip'>
                       <img alt='map' class='c-trip__img' src='images/map.jpg'>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='guitar' class='c-trip__img' src='images/guitar.jpg'>
                       <div class='c-trip__text'>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</div>
                       <div class='c-trip__show'>
                         <a class='c-trip__link' href='#'>Show on the map</a>
                       </div>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='statue2' class='c-trip__img' src='images/statue2.jpg'>
                       <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
                       <div class='c-trip__show'>
                         <a class='c-trip__link' href='#'>Show on the map</a>
                       </div>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='party' class='c-trip__img' src='images/party.jpg'>
                       <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
                       <div class='c-trip__show'>
@@ -279,21 +277,21 @@
                     <img alt='timeline' src='images/timeline_day3.png'>
                   </div>
                   <div class='c-day__wrap c-day__wrap--right'>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='statue' class='c-trip__img' src='images/statue.jpg'>
                       <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
                       <div class='c-trip__show'>
                         <a class='c-trip__link' href='#'>Show on the map</a>
                       </div>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='park' class='c-trip__img' src='images/park.jpg'>
                       <div class='c-trip__text'>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</div>
                       <div class='c-trip__show'>
                         <a class='c-trip__link' href='#'>Show on the map</a>
                       </div>
                     </div>
-                    <div class='c-trip'>
+                    <div class='c-trip c-day__trip'>
                       <img alt='dancing' class='c-trip__img' src='images/dancing.jpg'>
                       <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
                       <div class='c-trip__show'>
@@ -306,16 +304,16 @@
             </div>
           </div>
         </div>
-        <div class='c-create'>
+        <div class='c-create-contest'>
           <div class='l-container-main'>
-            <h3 class='c-create__header'>Love this itinerary?</h3>
-            <div class='c-create__text'>
+            <h3 class='c-create-contest__header'>Love this itinerary?</h3>
+            <div class='c-create-contest__text'>
               Use it to create a new contest and local experts
               <br>
               will get a better sense of the trip you want
             </div>
-            <button class='c-create__btn'>Create A New contest</button>
-            <a class='c-create__link' href='#'>Learn more</a>
+            <button class='c-create-contest__btn'>Create A New contest</button>
+            <a class='c-create-contest__link' href='#'>Learn more</a>
           </div>
         </div>
       </main>

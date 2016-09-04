@@ -1,6 +1,5 @@
-.c-date {
+.c-date-select {
 	@include clearfix;
-	margin-bottom: 30px;
 
 	&__arrow {
 		margin-top: 5px;
@@ -31,7 +30,7 @@
 
 	&__item {
 		float: left;
-		width: 33.3%;
+		width: (100% / 3);
 		box-sizing: border-box;
 	}
 
@@ -65,11 +64,5 @@
 		&:hover {
 			background-color: $color-deep-yellow;
 		}
-	}
-}
-
-@media all and (max-width: $screen-md) {
-	.c-date {
-		// width: 75%;
 	}
 }

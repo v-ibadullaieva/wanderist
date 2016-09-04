@@ -1,4 +1,4 @@
-.c-create {
+.c-create-contest {
 	text-align: center;
 	padding-top: 138px;
 	padding-bottom: 95px;
@@ -69,7 +69,7 @@
 }
 
 @media all and (max-width: $screen-md) {
-	.c-create {
+	.c-create-contest {
 		&__link {
 			display: none;
 		}

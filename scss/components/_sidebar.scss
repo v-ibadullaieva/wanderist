@@ -4,6 +4,10 @@
 	overflow: auto;
 	box-sizing: border-box;
 	height: 100%;
+
+	&__date-select {
+		margin-bottom: 30px;
+	}
 }
 
 @media all and (max-width: $screen-md) {

@@ -1,6 +1,6 @@
 .c-footer {
 	background-color: $color-brown;
-	padding: 17px 0 20px;
+	padding: 19px 0 18px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -53,7 +53,6 @@
 
 @media all and (max-width: $screen-md) {
 	.c-footer {
-
 		&__menu {
 			margin-top: -33px;
 		}

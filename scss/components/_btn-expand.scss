@@ -1,17 +1,13 @@
 .c-btn-expand {
-	position: absolute;
-	top: 50%;
-	right: 60px;
-	margin-top: -15px;
+	background-color: $color-white;
+	border: 2px solid #fede06;
+	border-radius: 15px;
+	display: block;
+	line-height: 26px;
+	width: 30px;
+
 
 	&__link {
-		background-color: $color-white;
-		border: 2px solid #fede06;
-		border-radius: 15px;
-		display: block;
-		line-height: 26px;
-		width: 30px;
-
 		&:focus {
 			outline: none;
 		}
