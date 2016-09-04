@@ -1,0 +1,74 @@
+.c-footer {
+	background-color: $color-brown;
+	padding: 17px 0 20px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	&--fixed {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+
+	&__menu {
+		top: 50%;
+		margin-top: -7px;
+		position: absolute;
+
+	}
+
+	&__item {
+		float: left;
+		margin-left: 20px;
+	}
+
+	&__link {
+		@include font(14px, 400, $color-white);
+
+		&:hover {
+			color: $color-deep-yellow;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__logo {
+		@include sprite-image(footer_logo);
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -13.5px;
+		margin-left: -29px;
+
+		&:hover {
+			@include sprite-image(footer_logo_hover);
+		}
+	}
+}
+
+@media all and (max-width: $screen-md) {
+	.c-footer {
+
+		&__menu {
+			margin-top: -33px;
+		}
+
+		&__item {
+			float: none;
+			line-height: 22px;
+		}
+	}
+}
+
+@media all and (max-width: $screen-xs) {
+	.c-footer {
+		&__logo {
+			display: none;
+		}
+	}
+}

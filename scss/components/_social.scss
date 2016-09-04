@@ -1,0 +1,81 @@
+.c-social {
+	&__share {
+		@include font(15px, 400, $color-brown);
+		margin-right: 22px;
+
+		&--white {
+			color: $color-white;
+			margin-top: 18px;
+		}
+	}
+
+	&__menu {
+		@include clearfix;
+		margin-top: 12.5px;
+	}
+
+	&__item {
+		float: right;
+		margin-right: 14px;
+		&:first-of-type {
+			margin-right: 20px;
+		}
+	}
+
+	&__link {
+		display: block;
+
+		&--footer_fb {
+			&:hover {
+				@include sprite-image(footer_fb_icon_hover);
+			}
+		}
+
+		&--footer_tw {
+			&:hover {
+				@include sprite-image(footer_tw_icon_hover);
+			}
+		}
+
+		&--fb,
+		&--tw {
+			&:hover {
+				opacity: .8;
+			}
+		}
+
+		@each $i in fb, tw, footer_fb, footer_tw {
+			&--#{$i} {
+				@include sprite-image(#{$i}_icon);
+			}
+		}
+	}
+
+	&__copy {
+		@include font(14px, 400, $color-light-brown);
+		margin-top: 10px;
+		display: inline-block;
+		margin-right: 20px;
+	}
+}
+
+@media all and (max-width: $screen-md) {
+	.c-social {
+
+		&--hide {
+			display: none;
+		}
+
+		&__share {
+			color: $color-white;
+		}
+
+		&__link {
+			@each $i in fb, tw {
+				&--#{$i} {
+					@include sprite-image(footer_#{$i}_icon);
+				}
+			}
+		}
+	}
+}

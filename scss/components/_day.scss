@@ -1,0 +1,58 @@
+.c-day {
+	padding: 30px 60px 5px 60px;
+
+	&__wrap {
+		width: (342px / 823px * 100%);
+
+		&--left {
+			float: left;
+		}
+
+		&--right {
+			float: right;
+		}
+	}
+
+	&__timeline {
+		margin-top: 14%;
+		width: 100% - (2 * (342px / 823px * 100%));
+		text-align: center;
+	}
+
+	&__timeline-res {
+		display: none;
+		margin-top: 100%;
+		width: 20%;
+		text-align: center;
+	}
+
+	&__timeline-img {
+		width: 35%;
+	}
+}
+
+@media all and (max-width: $screen-lg) {
+	.c-day {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
+
+@media all and (max-width: $screen-md) {
+	.c-day {
+   		&__wrap {
+   			width: 80%;
+   			float: right;
+   		}
+	}
+}
+
+@media all and (max-width: $screen-sm) {
+	.c-day {
+		&__wrap {
+			width: 100%;
+		}
+	}
+}
+
+

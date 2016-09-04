@@ -1,0 +1,44 @@
+.c-side-btn {
+    background-color: $color-deep-yellow;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 7px 11px 8px 14px;
+    display: inline-block;
+    box-shadow: rgba(223, 196, 10, 0.8) 0px 2px 1px;
+    position: absolute;
+    top: 33px;
+    right: -35px;
+    z-index: 1;
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &__icon {
+        color: $color-dark-brown;
+        font: normal normal normal 28px/1 FontAwesome
+    }
+
+}
+
+@media all and (max-width: $screen-md) {
+    .c-side-btn {
+        &--active {
+            right: 0;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+}
+
+@media all and (max-width: $screen-xs) {
+    .c-side-btn {
+        top: 36px;
+
+        &__icon {
+            font: normal normal normal 21px/1 FontAwesome
+        }
+    }
+}

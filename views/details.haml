@@ -1,0 +1,78 @@
+%html{lang: "en"}
+  = render 'head'
+  %body
+    #wrapper
+      %header.c-header
+        .l-container
+          .c-header__wrap.l-clearfix
+            .l-left
+              %a.c-header__menu-btn{:href => "#"}
+              %ul.c-header__menu
+                %li.c-header__item
+                  %a.c-header__link.c-header__link--overview{:href => "index.html"} Overview
+                %li.c-header__item
+                  %a.c-header__link.c-header__link--details{:href => "details.html"} Details
+            .c-social.c-header__social.c-social--hide.l-right
+              %span.c-social__share.l-left Share this itinerary:
+              %ul.c-social__menu.l-left
+                %li.c-social__item
+                  %a.c-social__link.c-social__link--tw{:href => "#"}
+                %li.c-social__item
+                  %a.c-social__link.c-social__link--fb{:href => "#"}
+      %main.l-clearfix.c-details-container
+        .c-details-container__sidebar.l-clearfix
+          %a.c-side-btn.c-side-btn--active.h-md-hidden.js-sidebar-toggle{:href => "#",  :"data-target" => '.c-details-container'}
+            %i.c-side-btn__icon.c-side-btn__icon--left.fa.fa-angle-left.js-left
+            %i.c-side-btn__icon.c-side-btn__icon--right.h-hidden.fa.fa-angle-right.js-right
+          %a.c-side-btn.c-side-check.c-side-btn--active.js-sidebar-toggle.h-hidden.h-md-visible{:href => "#",  :"data-target" => '.c-details-container'}
+            %i.c-side-btn__icon.c-side-btn__icon--left.fa.fa-angle-left.js-left
+            %i.c-side-btn__icon.c-side-btn__icon--right.h-hidden.fa.fa-angle-right.js-right
+          .c-sidebar
+            .c-date
+              %a.c-date__arrow.c-date__arrow--first.l-left{:href => "#"}
+                %i.c-date__icon.fa.fa-angle-left
+              %a.c-date__arrow.c-date__arrow--last.l-right{:href => "#"}
+                %i.c-date__icon.fa.fa-angle-right
+              %ul.c-date__menu
+                %li.c-date__item
+                  %a.c-date__link.c-date__link--first.c-date__link--active{:href => "#"} Jun 24
+                %li.c-date__item
+                  %a.c-date__link.c-date__link--central{:href => "#"} Jun 25
+                %li.c-date__item
+                  %a.c-date__link.c-date__link--last{:href => "#"} Jun 26
+            .c-schedule
+              .c-schedule__head.l-clearfix
+                .c-schedule__head-info
+                  .c-schedule__title.c-schedule__title--foodie Trattoria Da Ropeton
+                  .c-schedule__adress Via Fontana del Ferro, 1, Verona, Italy
+                .c-schedule__time
+                  %i.c-schedule__icon.fa.fa-clock-o
+                  10.00
+              %img.c-schedule__img{:src => "images/food.jpg", :alt => "food"}/
+              .c-schedule__descr.js-hide#overview-extended Amazing owner who sings and serves the food himself! Experience which you'll never forget and will include to the travel different mockups :)
+              %a.c-schedule__arrow.js-toggle-btn{:href => "#", :"data-target" => '#overview-extended'}
+                %i.c-schedule__arrow-icon.fa.fa-angle-up.js-up{:"aria-hidden" => "true"}
+                %i.c-schedule__arrow-icon.fa.fa-angle-down.js-down.h-hidden{:"aria-hidden" => "true"}
+            .c-steps
+              %i.c-steps__item.fa.fa-car
+            .c-schedule
+              .c-schedule__head.l-clearfix
+                .c-schedule__head-info
+                  .c-schedule__title.c-schedule__title--cart Trattoria Da Ropeton
+                  .c-schedule__adress Via Fontana del Ferro, 1, Verona, Italy
+                .c-schedule__time
+                  %i.c-schedule__icon.fa.fa-clock-o
+                  12.00
+            .c-steps
+              %i.c-steps__item.fa.fa-bus
+            .c-schedule
+              .c-schedule__head.l-clearfix
+                .c-schedule__head-info
+                  .c-schedule__title.c-schedule__title--pet Trattoria Da Ropeton
+                  .c-schedule__adress Via Fontana del Ferro, 1, Verona, Italy
+                .c-schedule__time
+                  %i.c-schedule__icon.fa.fa-clock-o
+                  15.00
+        .c-details-container__map
+          .c-map#map
+      = render 'footer'

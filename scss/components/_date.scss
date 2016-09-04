@@ -1,0 +1,75 @@
+.c-date {
+	@include clearfix;
+	margin-bottom: 30px;
+
+	&__arrow {
+		margin-top: 5px;
+
+		&--first {
+			margin-left: 5%;
+		}
+
+		&--last {
+			margin-right: 5%;
+		}
+	}
+
+	&__icon {
+		color: $color-dark-brown;
+		font: normal normal normal 20px/1 FontAwesome;
+
+		&:hover {
+			color: $color-deep-yellow;
+		}
+	}
+
+	&__menu {
+		@include clearfix;
+		width: 75%;
+		margin: 0 auto;
+	}
+
+	&__item {
+		float: left;
+		width: 33.3%;
+		box-sizing: border-box;
+	}
+
+	&__link {
+		@include font(14px, 400, $color-dark-brown);
+		line-height: 28px;
+		border: 1px solid $color-deep-yellow;
+		display: block;
+		background-color: $color-white;
+		text-align: center;
+
+		&--active {
+			background-color: $color-deep-yellow;
+		}
+
+		&--central {
+			border-right: none;
+			border-left: none;
+		}
+
+		&--first {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		&--last {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		&:hover {
+			background-color: $color-deep-yellow;
+		}
+	}
+}
+
+@media all and (max-width: $screen-md) {
+	.c-date {
+		// width: 75%;
+	}
+}

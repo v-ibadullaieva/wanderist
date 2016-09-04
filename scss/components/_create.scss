@@ -1,0 +1,77 @@
+.c-create {
+	text-align: center;
+	padding-top: 138px;
+	padding-bottom: 95px;
+
+	&__header {
+		@include font(20px, 600, $color-dark-green);
+		position: relative;
+		margin-bottom: 28px;
+
+		&:before {
+			@include empty-pseudo;
+			@include sprite-image(more_img);
+			display: block;
+			position: absolute;
+			top: -94px;
+			left: 50%;
+			right: 0;
+			margin-left: -96.5px;
+		}
+	}
+
+	&__text {
+		@include font(14px, 400, $color-dark-green);
+		line-height: 18px;
+		margin-bottom: 28px;
+	}
+
+	&__btn {
+		@include font(16px, 400, $color-dark-green);
+		background-color: $color-deep-yellow;
+		border: none;
+		border-bottom: 2px solid $color-mustard;
+		border-radius: 6px;
+		line-height: 50px;
+		text-transform: uppercase;
+		padding: 0 30px;
+		letter-spacing: 1px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:active {
+			border-bottom: none;
+			border-top: 2px solid $color-mustard;
+			background-color: $color-deep-yellow-active;
+		}
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	&__link {
+		@include font(11px, 400, $color-dark-green);
+		text-transform: uppercase;
+		text-decoration: underline;
+		margin-left: 25px;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+@media all and (max-width: $screen-md) {
+	.c-create {
+		&__link {
+			display: none;
+		}
+	}
+}

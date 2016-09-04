@@ -1,0 +1,53 @@
+.c-trips {
+
+	&__wrap {
+		background-color: $color-light-beige;
+		border: 1px solid $color-coffee;
+		border-radius: 11px;
+		padding: 40px 0 30px;
+	}
+
+	&__header {
+		@include font(20px, 600, $color-dark-green);
+		@include background-image(linear-gradient(to right, $color-white, $color-light-beige));
+		text-align: center;
+		cursor: pointer;
+		position: relative;
+		padding: 4px 0;
+		margin-left: -1px;
+		margin-right: -1px;
+		// box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+		&:after {
+			@include empty-pseudo;
+			position: absolute;
+			background-color: $color-coffee;
+			top: 36px;
+			left: 0;
+			right: 0;
+			border-radius: 50% / 20px;
+			// box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+			clip: rect(25px, auto, 50px, 0);
+			height: 35px;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&--wrap {
+			// @include border-gradient($color-border-left, $color-border-right);
+			line-height: 48px;
+			border-top: 2px dashed $color-coffee;
+			border-bottom: 2px dashed $color-coffee;
+			// border-top: 1px;
+			// border-bottom: 1px;
+			position: relative;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+

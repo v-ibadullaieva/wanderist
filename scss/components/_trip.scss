@@ -1,0 +1,77 @@
+.c-trip {
+	border: 2px solid $color-coffee;
+	overflow: hidden;
+	background-color: $color-white;
+	border-radius: 10px;
+	margin-bottom: 32px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+	&__img {
+		width: 100%;
+		display: block;
+	}
+
+	&__text {
+		@include font(14px, 400, $color-dark-green);
+		margin: 20px 20px 20px 20px;
+		line-height: 16px;
+	}
+
+	&__show {
+		@include background-image(linear-gradient(to right, $color-white, $color-light-beige));
+		margin-bottom: 16px;
+		position: relative;
+		padding: 5px 0 ;
+
+		&:after {
+			@include empty-pseudo;
+			position: absolute;
+			background-color: $color-light-grey;
+			top: 23px;
+			left: 0;
+			right: 0;
+			border-radius: 50% / 20px;
+			// box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+			clip: rect(17px, auto, 50px, 0);
+			height: 22px;
+		}
+	}
+
+	&__link {
+		@include font(14px, 400, $color-orange);
+		display: block;
+		line-height: 28px;
+		border-top: 1px dashed $color-coffee;
+		border-bottom: 1px dashed $color-coffee;
+		position: relative;
+		padding-left: 37px;
+
+		&:before {
+			@include empty-pseudo;
+			@include sprite-image(map_icon);
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 20px;
+			margin-top: -7.5px;
+		}
+	}
+}
+
+@media all and (max-width: $screen-md) {
+	.c-trip {
+		&--map {
+			width: 125%;
+			margin-left: -25%;
+		}
+	}
+}
+
+@media all and (max-width: $screen-sm) {
+	.c-trip {
+		&--map {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}

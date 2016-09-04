@@ -1,0 +1,30 @@
+.l-container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.l-container-footer {
+	max-width: 1320px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.l-container-main {
+	max-width: 940px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.l-clearfix {
+	@include clearfix;
+}
+
+.l-left {
+	float: left;
+}
+
+.l-right {
+	float: right;
+}

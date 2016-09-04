@@ -1,0 +1,37 @@
+.c-steps {
+	background-color: $color-white;
+	border: 1px solid $color-deep-yellow;
+	border-radius: 20px;
+	display: inline-block;
+	width: 40px;
+	text-align: center;
+	position: relative;
+	margin: 20px 0;
+
+	&:before {
+		@include empty-pseudo;
+		position: absolute;
+		width: 1px;
+		height: 20px;
+		background-color: $color-deep-yellow;
+		top: -20px;
+		left: 50%;
+		// border: 1px solid
+	}
+
+	&:after {
+		@include empty-pseudo;
+		position: absolute;
+		width: 1px;
+		height: 20px;
+		background-color: $color-deep-yellow;
+		bottom: -20px;
+		left: 50%;
+		// border: 1px solid
+	}
+
+	&__item {
+		line-height: 38px;
+
+	}
+}

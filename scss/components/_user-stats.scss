@@ -1,0 +1,37 @@
+.c-user-stats {
+	padding-top: 22px;
+	&__item {
+		@include clearfix;
+		margin-bottom: 27px;
+	}
+
+	&__info {
+		@include font(14px, 400, $color-dark-green);
+		float: left;
+		width: 18%;
+
+		&--text-right {
+			text-align: right;
+		}
+	}
+
+	&__bar {
+		border: 1px solid $color-beige;
+		border-radius: 10px;
+		width: 60%;
+		height: 10px;
+		float: left;
+		position: relative;
+		top: 0;
+		margin-left: 2%;
+		margin-right: 2%;
+
+	}
+
+	&__inner-bar {
+		border: 1px solid $color-white;
+		border-radius: 10px;
+		background-color: $color-lime;
+		height: 8px;
+	}
+}

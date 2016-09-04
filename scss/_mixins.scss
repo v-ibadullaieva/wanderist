@@ -1,0 +1,38 @@
+@import "get_sprite";
+
+@mixin media-sprite($sprite) {
+	@include get-sprite($images-sprites, $sprite);
+}
+
+@mixin sprite-image($image) {
+	// @include images-sprite($image);
+	@include media-sprite($image);
+	width: images-sprite-width($image);
+ 	height: images-sprite-height($image);
+}
+
+@mixin font($size, $weight, $color: #000) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+
+@mixin clearfix {
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}
+
+@mixin empty-pseudo {
+	content: ".";
+	font-size: 0;
+	color: transparent;
+}
+
+
+
+
+
+

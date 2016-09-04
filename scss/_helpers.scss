@@ -1,0 +1,33 @@
+.h-hidden {
+	display: none !important;
+}
+
+.h-visible {
+	display: block !important;
+}
+
+.h-hide {
+	display: none;
+}
+
+@media all and (max-width: $screen-md) {
+	.h-md-hidden {
+		display: none !important;
+	}
+
+	.h-md-visible {
+		display: block !important;
+	}
+}
+
+@media all and (max-width: $screen-sm) {
+	.h-sm-hidden {
+		display: none !important;
+	}
+
+	.h-sm-visible {
+		display: block !important;
+	}
+}
+
+

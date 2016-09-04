@@ -1,0 +1,159 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1' name='viewport'>
+    <title>Document</title>
+    <link href='css/font-awesome.min.css' rel='stylesheet'>
+    <link href='css/fontawesome-stars.css' rel='stylesheet'>
+    <link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.0/jquery.barrating.min.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js'></script>
+    <script src='javascripts/index.js'></script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <header class='c-header'>
+        <div class='l-container'>
+          <div class='c-header__wrap l-clearfix'>
+            <div class='l-left'>
+              <a class='c-header__menu-btn' href='#'></a>
+              <ul class='c-header__menu'>
+                <li class='c-header__item'>
+                  <a class='c-header__link c-header__link--overview' href='index.html'>Overview</a>
+                </li>
+                <li class='c-header__item'>
+                  <a class='c-header__link c-header__link--details' href='details.html'>Details</a>
+                </li>
+              </ul>
+            </div>
+            <div class='c-social c-header__social c-social--hide l-right'>
+              <span class='c-social__share l-left'>Share this itinerary:</span>
+              <ul class='c-social__menu l-left'>
+                <li class='c-social__item'>
+                  <a class='c-social__link c-social__link--tw' href='#'></a>
+                </li>
+                <li class='c-social__item'>
+                  <a class='c-social__link c-social__link--fb' href='#'></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class='l-clearfix c-details-container'>
+        <div class='c-details-container__sidebar l-clearfix'>
+          <a class='c-side-btn c-side-btn--active h-md-hidden js-sidebar-toggle' data-target='.c-details-container' href='#'>
+            <i class='c-side-btn__icon c-side-btn__icon--left fa fa-angle-left js-left'></i>
+            <i class='c-side-btn__icon c-side-btn__icon--right h-hidden fa fa-angle-right js-right'></i>
+          </a>
+          <a class='c-side-btn c-side-check c-side-btn--active js-sidebar-toggle h-hidden h-md-visible' data-target='.c-details-container' href='#'>
+            <i class='c-side-btn__icon c-side-btn__icon--left fa fa-angle-left js-left'></i>
+            <i class='c-side-btn__icon c-side-btn__icon--right h-hidden fa fa-angle-right js-right'></i>
+          </a>
+          <div class='c-sidebar'>
+            <div class='c-date'>
+              <a class='c-date__arrow c-date__arrow--first l-left' href='#'>
+                <i class='c-date__icon fa fa-angle-left'></i>
+              </a>
+              <a class='c-date__arrow c-date__arrow--last l-right' href='#'>
+                <i class='c-date__icon fa fa-angle-right'></i>
+              </a>
+              <ul class='c-date__menu'>
+                <li class='c-date__item'>
+                  <a class='c-date__link c-date__link--first c-date__link--active' href='#'>Jun 24</a>
+                </li>
+                <li class='c-date__item'>
+                  <a class='c-date__link c-date__link--central' href='#'>Jun 25</a>
+                </li>
+                <li class='c-date__item'>
+                  <a class='c-date__link c-date__link--last' href='#'>Jun 26</a>
+                </li>
+              </ul>
+            </div>
+            <div class='c-schedule'>
+              <div class='c-schedule__head l-clearfix'>
+                <div class='c-schedule__head-info'>
+                  <div class='c-schedule__title c-schedule__title--foodie'>Trattoria Da Ropeton</div>
+                  <div class='c-schedule__adress'>Via Fontana del Ferro, 1, Verona, Italy</div>
+                </div>
+                <div class='c-schedule__time'>
+                  <i class='c-schedule__icon fa fa-clock-o'></i>
+                  10.00
+                </div>
+              </div>
+              <img alt='food' class='c-schedule__img' src='images/food.jpg'>
+              <div class='c-schedule__descr js-hide' id='overview-extended'>Amazing owner who sings and serves the food himself! Experience which you'll never forget and will include to the travel different mockups :)</div>
+              <a class='c-schedule__arrow js-toggle-btn' data-target='#overview-extended' href='#'>
+                <i aria-hidden='true' class='c-schedule__arrow-icon fa fa-angle-up js-up'></i>
+                <i aria-hidden='true' class='c-schedule__arrow-icon fa fa-angle-down js-down h-hidden'></i>
+              </a>
+            </div>
+            <div class='c-steps'>
+              <i class='c-steps__item fa fa-car'></i>
+            </div>
+            <div class='c-schedule'>
+              <div class='c-schedule__head l-clearfix'>
+                <div class='c-schedule__head-info'>
+                  <div class='c-schedule__title c-schedule__title--cart'>Trattoria Da Ropeton</div>
+                  <div class='c-schedule__adress'>Via Fontana del Ferro, 1, Verona, Italy</div>
+                </div>
+                <div class='c-schedule__time'>
+                  <i class='c-schedule__icon fa fa-clock-o'></i>
+                  12.00
+                </div>
+              </div>
+            </div>
+            <div class='c-steps'>
+              <i class='c-steps__item fa fa-bus'></i>
+            </div>
+            <div class='c-schedule'>
+              <div class='c-schedule__head l-clearfix'>
+                <div class='c-schedule__head-info'>
+                  <div class='c-schedule__title c-schedule__title--pet'>Trattoria Da Ropeton</div>
+                  <div class='c-schedule__adress'>Via Fontana del Ferro, 1, Verona, Italy</div>
+                </div>
+                <div class='c-schedule__time'>
+                  <i class='c-schedule__icon fa fa-clock-o'></i>
+                  15.00
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='c-details-container__map'>
+          <div class='c-map' id='map'></div>
+        </div>
+      </main>
+      <footer class='c-footer'>
+        <div class='l-container-footer clearfix'>
+          <ul class='c-footer__menu l-left'>
+            <li class='c-footer__item'>
+              <a class='c-footer__link' href='#'>Home</a>
+            </li>
+            <li class='c-footer__item'>
+              <a class='c-footer__link' href='#'>Itineraries</a>
+            </li>
+            <li class='c-footer__item'>
+              <a class='c-footer__link' href='#'>About</a>
+            </li>
+          </ul>
+          <a class='c-footer__logo' href='#'></a>
+          <div class='c-social c-footer__social l-right'>
+            <ul class='c-social__menu'>
+              <li class='c-social__item'>
+                <a class='c-social__link c-social__link--footer_tw' href='#'></a>
+              </li>
+              <li class='c-social__item'>
+                <a class='c-social__link c-social__link--footer_fb' href='#'></a>
+              </li>
+            </ul>
+            <div class='c-social__copy'>&copy; Wanderist 2014</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

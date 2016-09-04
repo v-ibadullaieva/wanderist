@@ -1,0 +1,23 @@
+.c-user {
+
+	&__img {
+		display: block;
+		border-radius: 5px;
+		box-shadow: 0 0 4px rgba(0,0,0,0.5);
+		margin: 3px;
+	}
+
+	&__wrap {
+		@include font(14px, 400, $color-dark-green);
+		margin: 5px 0 0 18px;
+	}
+
+	&__local {
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	&__name {
+		margin-bottom: 6px;
+	}
+}

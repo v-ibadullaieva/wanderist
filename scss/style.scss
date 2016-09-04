@@ -1,0 +1,66 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/shared";
+@import "../images/images/*.png";
+@import "mixins";
+@import "variables";
+@import "fonts";
+@import "layout";
+@import "helpers";
+@import "components/header";
+@import "components/social";
+@import "components/main";
+@import "components/user";
+@import "components/user-stats";
+@import "components/expert";
+@import "components/raiting";
+@import "components/overview";
+@import "components/trips";
+@import "components/btn-expand";
+@import "components/day";
+@import "components/trip";
+@import "components/create";
+@import "components/map";
+@import "components/side-btn";
+@import "components/sidebar";
+@import "components/date";
+@import "components/schedule";
+@import "components/steps";
+@import "components/footer";
+@import "components/details-container";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #272723;
+    height: 100%;
+    min-height: 100%;
+}
+
+main {
+    position: relative;
+}
+
+#wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 300px;
+    padding-bottom: 100px;
+    position: relative;
+    box-sizing: border-box;
+}

@@ -1,0 +1,29 @@
+.c-btn-expand {
+	position: absolute;
+	top: 50%;
+	right: 60px;
+	margin-top: -15px;
+
+	&__link {
+		background-color: $color-white;
+		border: 2px solid #fede06;
+		border-radius: 15px;
+		display: block;
+		line-height: 26px;
+		width: 30px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			border-color: $color-hover-green;
+		}
+	}
+
+	&__icon {
+		color: $color-dark-green;
+		font: normal normal normal 20px/1 FontAwesome;
+		margin: 0 auto;
+	}
+}

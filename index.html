@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1' name='viewport'>
+    <title>Document</title>
+    <link href='css/font-awesome.min.css' rel='stylesheet'>
+    <link href='css/fontawesome-stars.css' rel='stylesheet'>
+    <link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.0/jquery.barrating.min.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js'></script>
+    <script src='javascripts/index.js'></script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <header class='c-header'>
+        <div class='l-container'>
+          <div class='c-header__wrap l-clearfix'>
+            <div class='l-left'>
+              <a class='c-header__menu-btn' href='#'></a>
+              <ul class='c-header__menu'>
+                <li class='c-header__item'>
+                  <a class='c-header__link c-header__link--overview' href='index.html'>Overview</a>
+                </li>
+                <li class='c-header__item'>
+                  <a class='c-header__link c-header__link--details' href='details.html'>Details</a>
+                </li>
+              </ul>
+            </div>
+            <div class='c-social c-header__social l-right'>
+              <span class='c-social__share l-left'>Share this itinerary:</span>
+              <ul class='c-social__menu l-left'>
+                <li class='c-social__item'>
+                  <a class='c-social__link c-social__link--tw' href='#'></a>
+                </li>
+                <li class='c-social__item'>
+                  <a class='c-social__link c-social__link--fb' href='#'></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class='c-main'>
+          <div class='l-container-main'>
+            <div class='c-main__itin'>ITINERARY</div>
+            <h1 class='c-main__header'>Trip to Fabulous Las Vegas</h1>
+            <div class='l-clearfix'>
+              <div class='c-main__days l-left'>2 Days</div>
+              <ul class='c-main__menu l-left'>
+                <li class='c-main__item l-clearfix'>
+                  <a class='c-main__link c-main__link--family' href='#'>
+                    <span class='h-md-hidden'>family</span>
+                  </a>
+                </li>
+                <li class='c-main__item'>
+                  <a class='c-main__link c-main__link--foodie' href='#'>
+                    <span class='h-md-hidden'>foodie</span>
+                  </a>
+                </li>
+                <li class='c-main__item'>
+                  <a class='c-main__link c-main__link--cart' href='#'>
+                    <span class='h-md-hidden'>shopping</span>
+                  </a>
+                </li>
+                <li class='c-main__item'>
+                  <a class='c-main__link c-main__link--pet' href='#'>
+                    <span class='h-md-hidden'>pet frienly</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='c-expert'>
+          <div class='l-container-main'>
+            <div class='row'>
+              <div class='col-sm-5'>
+                <div class='c-user l-clearfix'>
+                  <img alt='user' class='c-user__img l-left' src='images/user.jpg'>
+                  <div class='c-user__wrap l-left'>
+                    <div class='c-user__local'>Local Expert</div>
+                    <div class='c-user__name'>Audrey Tautou</div>
+                    <div class='c-rait c-user__rait'>
+                      <div class='star-rating'>
+                        <select class='js-star-rating' name='rait'>
+                          <option label='1' value='1'></option>
+                          <option label='2' value='2'></option>
+                          <option label='3' value='3'></option>
+                          <option label='4' value='4'></option>
+                          <option label='5' value='5'></option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='c-user-stats'>
+                  <div class='c-user-stats__item'>
+                    <div class='c-user-stats__info'>Buget</div>
+                    <div class='c-user-stats__bar'>
+                      <div class='c-user-stats__inner-bar' style='width: 60%;'></div>
+                    </div>
+                    <div class='c-user-stats__info c-user-stats__info--text-right'>Luxury</div>
+                  </div>
+                  <div class='c-user-stats__item'>
+                    <div class='c-user-stats__info'>Relaxed</div>
+                    <div class='c-user-stats__bar'>
+                      <div class='c-user-stats__inner-bar' style='width: 80%;'></div>
+                    </div>
+                    <div class='c-user-stats__info c-user-stats__info--text-right'>Active</div>
+                  </div>
+                  <div class='c-user-stats__item'>
+                    <div class='c-user-stats__info'>Desolate</div>
+                    <div class='c-user-stats__bar'>
+                      <div class='c-user-stats__inner-bar' style='width: 40%;'></div>
+                    </div>
+                    <div class='c-user-stats__info c-user-stats__info--text-right'>Crowdy</div>
+                  </div>
+                </div>
+              </div>
+              <div class='col-sm-7'>
+                <div class='c-overview'>
+                  <div class='c-overview__title'>Overview</div>
+                  <div class='c-overview__text'>
+                    <p class='c-overview__par'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p>
+                    <p class='c-overview__par'>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam.</p>
+                    <p class='c-overview__par'>Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
+                    <div class='js-hide h-hide' id='overview-extended'>
+                      <p class='c-overview__par'>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam.</p>
+                      <p class='c-overview__par'>Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
+                    </div>
+                  </div>
+                  <a class='c-overview__arrow js-toggle-btn' data-target='#overview-extended' href='#'>
+                    <i aria-hidden='true' class='c-overview__icon fa fa-angle-down js-down'></i>
+                    <i aria-hidden='true' class='c-overview__icon--active fa fa-angle-up js-up h-hidden'></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='c-trips'>
+          <div class='l-container-main'>
+            <div class='c-trips__wrap'>
+              <div class='js-accordion'>
+                <h2 class='c-trips__header'>
+                  <div class='c-trips__header--wrap'>
+                    Day 1
+                    <div class='c-btn-expand'>
+                      <a class='c-btn-expand__link js-btn-expand' href='#'>
+                        <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--up js-toggle-up fa fa-angle-up'></i>
+                        <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--down js-toggle-down fa fa-angle-down h-hidden'></i>
+                      </a>
+                    </div>
+                  </div>
+                </h2>
+                <div class='c-day l-clearfix'>
+                  <div class='c-day__timeline-res l-left h-md-visible h-sm-hidden'>
+                    <img alt='timeline' class='c-day__timeline-img' src='images/timeline_responsive.png'>
+                  </div>
+                  <div class='c-day__wrap c-day__wrap--left'>
+                    <div class='c-trip c-trip--map'>
+                      <img alt='map' class='c-trip__img' src='images/map.jpg'>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='casino' class='c-trip__img' src='images/casino.jpg'>
+                      <div class='c-trip__text'>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='c-day__timeline l-left h-md-hidden'>
+                    <img alt='timeline' src='images/timeline.png'>
+                  </div>
+                  <div class='c-day__wrap c-day__wrap--right'>
+                    <div class='c-trip'>
+                      <img alt='las_vegas' class='c-trip__img' src='images/las_vegas.jpg'>
+                      <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='gondola' class='c-trip__img' src='images/gondola.jpg'>
+                      <div class='c-trip__text'>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h2 class='c-trips__header'>
+                  <div class='c-trips__header--wrap'>
+                    Day 2
+                    <div class='c-btn-expand'>
+                      <a class='c-btn-expand__link js-btn-expand' href='#'>
+                        <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--up js-toggle-up h-hidden fa fa-angle-up'></i>
+                        <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--down js-toggle-down fa fa-angle-down'></i>
+                      </a>
+                    </div>
+                  </div>
+                </h2>
+                <div class='c-day l-clearfix'>
+                  <div class='c-day__timeline-res l-left h-md-visible h-sm-hidden'>
+                    <img alt='timeline' class='c-day__timeline-img' src='images/timeline_day2_responsive.png'>
+                  </div>
+                  <div class='c-day__wrap c-day__wrap--left'>
+                    <div class='c-trip c-trip--map'>
+                      <img alt='map' class='c-trip__img' src='images/map.jpg'>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='fountain' class='c-trip__img' src='images/fountain.jpg'>
+                      <div class='c-trip__text'>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='c-day__timeline l-left h-md-hidden'>
+                    <img alt='timeline' src='images/timeline_day2.png'>
+                  </div>
+                  <div class='c-day__wrap c-day__wrap--right'>
+                    <div class='c-trip'>
+                      <img alt='rocks' class='c-trip__img' src='images/rocks.jpg'>
+                      <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h2 class='c-trips__header'>
+                  <div class='c-trips__header--wrap'>
+                    Day 3
+                    <div class='c-btn-expand'>
+                      <a class='c-btn-expand__link js-btn-expand' href='#'>
+                        <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--up js-toggle-up h-hidden fa fa-angle-up'></i>
+                        <i aria-hidden='true' class='c-btn-expand__icon c-btn-expand__icon--down js-toggle-down fa fa-angle-down'></i>
+                      </a>
+                    </div>
+                  </div>
+                </h2>
+                <div class='c-day l-clearfix'>
+                  <div class='c-day__timeline-res l-left h-md-visible h-sm-hidden'>
+                    <img alt='timeline' class='c-day__timeline-img' src='images/timeline_day3_responsive.png'>
+                  </div>
+                  <div class='c-day__wrap c-day__wrap--left'>
+                    <div class='c-trip c-trip--map'>
+                      <img alt='map' class='c-trip__img' src='images/map.jpg'>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='guitar' class='c-trip__img' src='images/guitar.jpg'>
+                      <div class='c-trip__text'>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='statue2' class='c-trip__img' src='images/statue2.jpg'>
+                      <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='party' class='c-trip__img' src='images/party.jpg'>
+                      <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='c-day__timeline l-left h-md-hidden'>
+                    <img alt='timeline' src='images/timeline_day3.png'>
+                  </div>
+                  <div class='c-day__wrap c-day__wrap--right'>
+                    <div class='c-trip'>
+                      <img alt='statue' class='c-trip__img' src='images/statue.jpg'>
+                      <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='park' class='c-trip__img' src='images/park.jpg'>
+                      <div class='c-trip__text'>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                    <div class='c-trip'>
+                      <img alt='dancing' class='c-trip__img' src='images/dancing.jpg'>
+                      <div class='c-trip__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                      <div class='c-trip__show'>
+                        <a class='c-trip__link' href='#'>Show on the map</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='c-create'>
+          <div class='l-container-main'>
+            <h3 class='c-create__header'>Love this itinerary?</h3>
+            <div class='c-create__text'>
+              Use it to create a new contest and local experts
+              <br>
+              will get a better sense of the trip you want
+            </div>
+            <button class='c-create__btn'>Create A New contest</button>
+            <a class='c-create__link' href='#'>Learn more</a>
+          </div>
+        </div>
+      </main>
+      <footer class='c-footer'>
+        <div class='l-container-footer clearfix'>
+          <ul class='c-footer__menu l-left'>
+            <li class='c-footer__item'>
+              <a class='c-footer__link' href='#'>Home</a>
+            </li>
+            <li class='c-footer__item'>
+              <a class='c-footer__link' href='#'>Itineraries</a>
+            </li>
+            <li class='c-footer__item'>
+              <a class='c-footer__link' href='#'>About</a>
+            </li>
+          </ul>
+          <a class='c-footer__logo' href='#'></a>
+          <div class='c-social c-footer__social l-right'>
+            <ul class='c-social__menu'>
+              <li class='c-social__item'>
+                <a class='c-social__link c-social__link--footer_tw' href='#'></a>
+              </li>
+              <li class='c-social__item'>
+                <a class='c-social__link c-social__link--footer_fb' href='#'></a>
+              </li>
+            </ul>
+            <div class='c-social__copy'>&copy; Wanderist 2014</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

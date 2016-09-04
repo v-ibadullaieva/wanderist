@@ -1,0 +1,111 @@
+.c-schedule {
+	background-color: $color-white;
+	border: 1px solid $color-coffee;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 20px 0;
+
+	&__head {
+		@include clearfix;
+		padding: 0 18px 0px 40px;
+	}
+
+	&__head-info {
+		float: left;
+	}
+
+	&__title {
+		@include font(20px, 400, $color-dark-brown);
+		position: relative;
+
+		&:before {
+			@include empty-pseudo;
+			position: absolute;
+			top: 50%;
+		}
+
+		&--foodie {
+			&:before {
+				left: -20px;
+				margin-top: -9px;
+			}
+		}
+
+		&--cart {
+			&:before {
+				left: -24px;
+				margin-top: -8px;
+			}
+		}
+
+		&--pet {
+			&:before {
+				left: -24px;
+				margin-top: -8px;
+			}
+		}
+
+		@each $i in foodie, cart, pet {
+			&--#{$i} {
+				&:before {
+					@include sprite-image(#{$i}_details);
+				}
+			}
+		}
+	}
+
+	&__adress {
+		@include font(14px, 400, $color-grey);
+		margin-top: 10px;
+	}
+
+	&__time {
+		@include font(14px, 400, $color-dark-brown);
+		float: right;
+	}
+
+	&__icon {
+		color: $color-dark-brown;
+		margin-top: 2px;
+		font: normal normal normal 16px/1 FontAwesome;
+	}
+
+	&__img {
+		width: 100%;
+		margin-top: 25px;
+	}
+
+	&__descr {
+		@include font(14px, 400, $color-dark-brown);
+		margin: 20px 20px 0;
+		line-height: 16px;
+	}
+
+	&__arrow {
+		display: block;
+		text-align: center;
+	}
+
+	&__arrow-icon {
+		color: $color-blue;
+		font: normal normal normal 20px/1 FontAwesome;
+
+		&:hover {
+			color: $color-orange;
+		}
+	}
+}
+
+@media all and (max-width: $screen-sm) {
+	.c-schedule {
+
+		&__head-info {
+			float: none;
+		}
+
+		&__time {
+			float: none;
+			margin-top: 7px;
+		}
+	}
+}

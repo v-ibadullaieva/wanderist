@@ -1,0 +1,111 @@
+.c-header {
+	background-color: #c8b485;
+
+	&--fixed {
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+	}
+
+	&__menu-btn {
+		display: block;
+		float: left;
+		position: relative;
+		width: 70px;
+		height: 60px;
+
+		&:before {
+			@include empty-pseudo;
+			@include sprite-image(header_menu);
+			position: absolute;
+			top: 20px;
+			right: 0px;
+			left: 20px;
+		}
+
+		&:hover {
+			&:before {
+				@include sprite-image(header_menu_hover);
+
+			}
+		}
+	}
+
+	&__wrap {
+		line-height: 59px;
+		position: relative;
+	}
+
+	&__menu {
+		float: left;
+	}
+
+	&__item {
+		float: left;
+		border-left: 1px solid #bba87b;
+
+		&:last-of-type {
+			border-right: 1px solid #bba87b;
+		}
+	}
+
+	&__link {
+		@include font(18px, 500, $color-brown);
+		padding: 20px 28px 20px 57px;
+		position: relative;
+		text-decoration: none;
+
+		&:before {
+			@include empty-pseudo;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 25px;
+			margin-top: -8px;
+		}
+
+		&:hover {
+			background-color: #d2c29b;
+		}
+
+		@each $i in overview, details {
+			&--#{$i} {
+				&:before {
+					@include sprite-image(#{$i}_icon);
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: $screen-md) {
+	.c-header__social {
+		position: absolute;
+		top: 68px;
+		right: 0px;
+		z-index: 1;
+	}
+}
+
+@media all and (max-width: $screen-xs) {
+	.c-header {
+
+		&__social {
+			position: absolute;
+			top: 68px;
+			right: 0px;
+			z-index: 1;
+		}
+
+		&__link {
+			padding-left: 27px;
+			padding-right: 27px;
+			font-size: 16px;
+
+			&:before {
+				content: none;
+			}
+		}
+	}
+}

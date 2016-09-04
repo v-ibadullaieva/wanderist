@@ -1,0 +1,18 @@
+.br-theme-fontawesome-stars {
+	.br-widget {
+		a {
+			font: normal normal normal 14px/1 FontAwesome;
+			margin-right: 2px;
+			&.br-selected {
+				&:after {
+					color: $color-yellow;
+				}
+			}
+			&.br-active {
+				&:after {
+					color: $color-yellow;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.c-sidebar {
+	background-color: $color-light;
+	padding: 40px 38px;
+	overflow: auto;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+@media all and (max-width: $screen-md) {
+	.c-sidebar {
+		overflow: visible;
+		height: auto;
+	}
+}
